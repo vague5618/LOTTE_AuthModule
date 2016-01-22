@@ -8,17 +8,70 @@
 
 import Foundation
 import UIKit
+import LocalAuthentication
+
 
 class FingerAuthController: UIViewController {
     
+    @IBOutlet weak var btn_back: UIButton!
+    
+    @IBOutlet weak var btn_authorizing: UIButton!
     
     override func viewDidLoad() {
         super.viewDidLoad()
-        
     }
     
     override func didReceiveMemoryWarning() {
         super.didReceiveMemoryWarning()
         
     }
+    
+    @IBAction func clickbtn_back(sender: AnyObject) {
+        
+        self.presentingViewController?.dismissViewControllerAnimated(true, completion: nil)
+        
+    }
+    
+    @IBAction func btnclick_authorizing(sender: AnyObject) {
+    
+        authorizing_process()
+    
+    }
+    
+    func authorizing_process(){
+        
+        let myContext = LAContext()
+        var authError : NSError?
+        let localizedReasonText = "인증을 해주세요"
+        
+        if myContext.canEvaluatePolicy(LAPolicy.DeviceOwnerAuthenticationWithBiometrics, error:&authError)
+        {
+            myContext.evaluatePolicy(LAPolicy.DeviceOwnerAuthenticationWithBiometrics, localizedReason: localizedReasonText, reply: {(success: Bool, error : NSError?)in
+                
+                if(success){
+                    self.authorizing_success()
+                }
+                else
+                {
+                    self.authorizing_fail(error!)
+                }
+            })
+        }
+        else
+        {
+            NSLog("not available")
+            
+            self.authorizing_fail(authError!)
+        }
+    }
+    
+    func authorizing_success(){
+        NSLog("인증성공")
+    }
+    
+    func authorizing_fail(error:NSError)
+    {
+        NSLog("인증실패, error code",error.code)
+    }
+    
 }

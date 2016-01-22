@@ -68,10 +68,28 @@
                                 <color key="textColor" cocoaTouchSystemColor="darkTextColor"/>
                                 <nil key="highlightedColor"/>
                             </label>
+                            <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="wEv-fX-jJg">
+                                <rect key="frame" x="143" y="275" width="34" height="30"/>
+                                <state key="normal" title="Back"/>
+                                <connections>
+                                    <action selector="clickbtn_back:" destination="kDH-DG-kn6" eventType="touchUpInside" id="o1J-5R-OMC"/>
+                                </connections>
+                            </button>
+                            <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="ENF-82-ZYL">
+                                <rect key="frame" x="121" y="210" width="79" height="30"/>
+                                <state key="normal" title="Authorizing"/>
+                                <connections>
+                                    <action selector="btnclick_authorizing:" destination="kDH-DG-kn6" eventType="touchUpInside" id="cW2-Sm-OaF"/>
+                                </connections>
+                            </button>
                         </subviews>
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
                     </view>
                     <simulatedScreenMetrics key="simulatedDestinationMetrics" type="retina4"/>
+                    <connections>
+                        <outlet property="btn_authorizing" destination="ENF-82-ZYL" id="xBE-DA-Mo5"/>
+                        <outlet property="btn_back" destination="wEv-fX-jJg" id="piX-c3-EvK"/>
+                    </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="wAS-Yu-7zg" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
@@ -95,10 +113,20 @@
                                 <color key="textColor" cocoaTouchSystemColor="darkTextColor"/>
                                 <nil key="highlightedColor"/>
                             </label>
+                            <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="AXT-6E-xEi">
+                                <rect key="frame" x="143" y="122" width="34" height="30"/>
+                                <state key="normal" title="Back"/>
+                                <connections>
+                                    <action selector="clickbtn_back:" destination="G0l-bX-aJu" eventType="touchUpInside" id="Xpm-sT-eQA"/>
+                                </connections>
+                            </button>
                         </subviews>
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
                     </view>
                     <simulatedScreenMetrics key="simulatedDestinationMetrics" type="retina4"/>
+                    <connections>
+                        <outlet property="btn_back" destination="AXT-6E-xEi" id="yt8-g8-gY2"/>
+                    </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="TnU-7J-MbS" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>

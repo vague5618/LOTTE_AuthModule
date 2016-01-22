@@ -11,8 +11,7 @@
 
 @interface SpeechAuthController()
 
-@property (nonatomic, strong) MTSpeechRecognizerClient *speechRecognizer;
-@property (nonatomic, strong) NSString *selectedServiceType;
+@property (weak, nonatomic) IBOutlet UIButton *btn_back;
 
 
 @end
@@ -27,4 +26,8 @@
     
 }
 
+- (IBAction)clickbtn_back:(id)sender {
+    
+    [self dismissViewControllerAnimated:YES completion:nil];
+}
 @end
