@@ -14,6 +14,8 @@ class MainController: UIViewController {
     
     @IBOutlet weak var btn_fingerAuth: UIButton!
     
+    @IBOutlet weak var btn_loginAuth: UIButton!
+    
     override func viewDidLoad() {
         super.viewDidLoad()
 
@@ -36,11 +38,21 @@ class MainController: UIViewController {
 
     @IBAction func btnclick_fingerAuth(sender: AnyObject) {
         
-        var movePage_target = self.storyboard?.instantiateViewControllerWithIdentifier("FingerAuth") as! FingerAuthController;
+        let movePage_target = self.storyboard?.instantiateViewControllerWithIdentifier("FingerAuth") as! FingerAuthController;
         
         movePage_target.modalTransitionStyle = UIModalTransitionStyle.FlipHorizontal
         
         self.presentViewController(movePage_target, animated: true, completion: nil)
+        
+    }
+    @IBAction func btnclick_loginAuth(sender: AnyObject) {
+        
+        let movePage_target = self.storyboard?.instantiateViewControllerWithIdentifier("LoginAuth") as! LoginAuthController;
+        
+       // movePage_target.modalTransitionStyle = UIModalTransitionStyle.FlipHorizontal
+        
+        self.presentViewController(movePage_target, animated: false, completion: nil)
+        
     }
 }
 

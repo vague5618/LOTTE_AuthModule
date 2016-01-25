@@ -17,8 +17,11 @@
 @interface SpeechAuthController : UIViewController <MTSpeechRecognizerDelegate,MTSpeechRecognizerViewDelegate>
 
 
-- (IBAction)clickbtn_back:(id)sender;
+- (IBAction)btnclick_back:(id)sender;
 
+- (IBAction)btnclick_authorizing:(id)sender;
+
+- (void)speechAuthorzing_process;
 
 @end
 

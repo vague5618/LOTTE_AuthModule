@@ -26,19 +26,19 @@ class FingerAuthController: UIViewController {
         
     }
     
-    @IBAction func clickbtn_back(sender: AnyObject) {
+    @IBAction func btnclick_back(sender: AnyObject) {
         
-        self.presentingViewController?.dismissViewControllerAnimated(true, completion: nil)
+        self.presentingViewController?.dismissViewControllerAnimated(false, completion: nil)
         
     }
     
     @IBAction func btnclick_authorizing(sender: AnyObject) {
     
-        authorizing_process()
+        fingerAuthorzing_process()
     
     }
     
-    func authorizing_process(){
+    func fingerAuthorzing_process(){
         
         let myContext = LAContext()
         var authError : NSError?
@@ -59,7 +59,7 @@ class FingerAuthController: UIViewController {
         }
         else
         {
-            NSLog("not available")
+            NSLog("Device is not supported fingerAuth")
             
             self.authorizing_fail(authError!)
         }
@@ -73,5 +73,5 @@ class FingerAuthController: UIViewController {
     {
         NSLog("인증실패, error code",error.code)
     }
-    
+
 }
