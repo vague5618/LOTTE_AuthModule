@@ -42,7 +42,7 @@ class FingerAuthController: UIViewController {
         
         let myContext = LAContext()
         var authError : NSError?
-        let localizedReasonText = "인증을 해주세요"
+        let localizedReasonText = "지문인증서비스"
         
         if myContext.canEvaluatePolicy(LAPolicy.DeviceOwnerAuthenticationWithBiometrics, error:&authError)
         {

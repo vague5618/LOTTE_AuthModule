@@ -17,6 +17,9 @@
 
 @property (nonatomic, strong) NSString *selectedServiceType;
 
+@property (nonatomic, strong) NSString *service_passwd;
+
+
 @end
 
 
@@ -25,6 +28,10 @@
 
 -(void)viewDidAppear:(BOOL)animated
 {
+    
+    self.selectedServiceType = SpeechRecognizerServiceTypeWeb;
+    
+    [self speechAuthorzing_process];
 }
 
 - (IBAction)btnclick_back:(id)sender {
@@ -34,22 +41,28 @@
 
 - (IBAction)btnclick_authorizing:(id)sender {
 
+    self.selectedServiceType = SpeechRecognizerServiceTypeWeb;
+    
     [self speechAuthorzing_process];
 }
 
 
 - (void)speechAuthorzing_process
 {
-    
-    self.selectedServiceType = SpeechRecognizerServiceTypeWord;
-    
-    NSMutableDictionary *config = [NSMutableDictionary dictionaryWithObjectsAndKeys:
-                                   @"a5bc9630b6c8c091405181692cbc7905", SpeechRecognizerConfigKeyApiKey,
-                                   self.selectedServiceType, SpeechRecognizerConfigKeyServiceType,nil];
+//    
+//    NSMutableDictionary *config = [NSMutableDictionary dictionaryWithObjectsAndKeys:
+//                                   @"a22f144ea8d58babab054d6d5b18caec", SpeechRecognizerConfigKeyApiKey,
+//                                   self.selectedServiceType, SpeechRecognizerConfigKeyServiceType,nil
+//                                   ,SpeechRecognizerConfigKeyShowSuggestView, @(NO)];
+//    
+    NSDictionary * config = @{SpeechRecognizerConfigKeyApiKey : @"a22f144ea8d58babab054d6d5b18caec",
+                              SpeechRecognizerConfigKeyCustomStrings : @"SpeechRecognizerDefault",
+                              SpeechRecognizerConfigKeyServiceType : self.selectedServiceType,
+                              SpeechRecognizerConfigKeyShowSuggestView : @(NO)};
     
     
     if ([self.selectedServiceType isEqualToString:SpeechRecognizerServiceTypeWord]) {
-        [config setValue:@"수지\n태연\n현아\n아이유\n효린" forKey:SpeechRecognizerConfigKeyUserDictionary];
+        [config setValue:self.service_passwd forKey:SpeechRecognizerConfigKeyUserDictionary];
     }
     
     MTSpeechRecognizerView *speechRecognizerView = [[MTSpeechRecognizerView alloc] initWithFrame:self.view.frame withConfig:config];
@@ -63,7 +76,33 @@
 
 - (void) onError:(MTSpeechRecognizerError)errorCode message:(NSString *)message
 {
-    NSLog(message);
+    NSLog(@"error : %@",message);
 }
+
+
+- (void) onResults:(NSArray *)results confidences:(NSArray *)confidences marked:(BOOL)marked
+{
+    
+    
+    NSString * target_string = [[NSString alloc] init];
+    
+    target_string = [results objectAtIndex:0];
+    
+    if (self.service_passwd==nil)
+    {
+        self.service_passwd = target_string;
+        NSLog(@"\n password setting %@",self.service_passwd);
+    }
+    
+    else if([self.service_passwd isEqualToString:target_string])
+    {
+        NSLog(@"\n LoginSuccess");
+    }
+}
+
+
+
+
+
 
 @end

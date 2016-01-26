@@ -11,7 +11,7 @@ import UIKit
 import Alamofire
 import SwiftyJSON
 
-class LoginAuthController: UIViewController {
+class LoginAuthController: UIViewController, UITextFieldDelegate {
     
     
     @IBOutlet weak var inputText_userEmail: UITextField!
@@ -19,11 +19,23 @@ class LoginAuthController: UIViewController {
     @IBOutlet weak var btn_login: UIButton!
     @IBOutlet weak var btn_cancel: UIButton!
     
-    var loginUrl = NSURL(string:"http://192.168.0.3:2000");
     override func viewDidLoad() {
         super.viewDidLoad()
-        
     }
+    
+    func textFieldShouldReturn(textField: UITextField) -> Bool {
+
+        inputText_userEmail.resignFirstResponder()
+        inputText_userPasswd.resignFirstResponder()
+        return true
+    }
+    
+    override func touchesBegan(touches: Set<UITouch>, withEvent event: UIEvent?) {
+    
+        self.view.endEditing(true);
+    }
+    
+    
     
     override func didReceiveMemoryWarning() {
         super.didReceiveMemoryWarning()
@@ -45,7 +57,7 @@ class LoginAuthController: UIViewController {
                 
                 if result.isEqualToString("true")
                 {
-
+                        self.moveToWebview()
                 }
                 
                 else
@@ -59,6 +71,16 @@ class LoginAuthController: UIViewController {
     @IBAction func btnclick_cancel(sender: AnyObject) {
         
         self.dismissViewControllerAnimated(false, completion: nil)
+        
+    }
+    
+    func moveToWebview(){
+        
+        let movePage_target = self.storyboard?.instantiateViewControllerWithIdentifier("WebView") as! WebViewController;
+        
+        // movePage_target.modalTransitionStyle = UIModalTransitionStyle.FlipHorizontal
+        
+        self.presentViewController(movePage_target, animated: false, completion: nil)
         
     }
     

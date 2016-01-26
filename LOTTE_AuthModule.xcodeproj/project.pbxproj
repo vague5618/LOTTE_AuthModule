@@ -7,6 +7,8 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		C6AF36141C56EE2D00A46E85 /* Alamofire.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = C6D8D7911C55F0D800EE5B97 /* Alamofire.framework */; };
+		C6AF361C1C56F85B00A46E85 /* WebViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = C6AF361B1C56F85B00A46E85 /* WebViewController.swift */; };
 		C6D8D74D1C55BC2B00EE5B97 /* LoginAuthController.swift in Sources */ = {isa = PBXBuildFile; fileRef = C6D8D74C1C55BC2B00EE5B97 /* LoginAuthController.swift */; };
 		C6D8D79F1C55F12700EE5B97 /* Alamofire.framework in Copy Frameworks */ = {isa = PBXBuildFile; fileRef = C6D8D7911C55F0D800EE5B97 /* Alamofire.framework */; settings = {ATTRIBUTES = (CodeSignOnCopy, RemoveHeadersOnCopy, ); }; };
 		C6D8D7BC1C56141A00EE5B97 /* SwiftyJSON.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = C6D8D7AD1C56140700EE5B97 /* SwiftyJSON.framework */; };
@@ -165,6 +167,7 @@
 /* End PBXCopyFilesBuildPhase section */
 
 /* Begin PBXFileReference section */
+		C6AF361B1C56F85B00A46E85 /* WebViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = WebViewController.swift; sourceTree = "<group>"; };
 		C6D8D74C1C55BC2B00EE5B97 /* LoginAuthController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = LoginAuthController.swift; sourceTree = "<group>"; };
 		C6D8D7861C55F0D800EE5B97 /* Alamofire.xcodeproj */ = {isa = PBXFileReference; lastKnownFileType = "wrapper.pb-project"; name = Alamofire.xcodeproj; path = Alamofire/Alamofire.xcodeproj; sourceTree = "<group>"; };
 		C6D8D7A21C56140700EE5B97 /* SwiftyJSON.xcodeproj */ = {isa = PBXFileReference; lastKnownFileType = "wrapper.pb-project"; name = SwiftyJSON.xcodeproj; path = ../SwiftyJSON/SwiftyJSON.xcodeproj; sourceTree = "<group>"; };
@@ -211,6 +214,7 @@
 				C6DA42021C51EF4B0095DE30 /* QuartzCore.framework in Frameworks */,
 				C6DA42001C51EF3F0095DE30 /* SystemConfiguration.framework in Frameworks */,
 				C6DA41FE1C51EF340095DE30 /* MediaPlayer.framework in Frameworks */,
+				C6AF36141C56EE2D00A46E85 /* Alamofire.framework in Frameworks */,
 				C6DA41FC1C51EF170095DE30 /* DaumSpeech.framework in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -323,6 +327,7 @@
 				C6DA42171C51F39F0095DE30 /* FingerAuthController.swift */,
 				C6DA41D71C51ED090095DE30 /* MainController.swift */,
 				C6D8D74C1C55BC2B00EE5B97 /* LoginAuthController.swift */,
+				C6AF361B1C56F85B00A46E85 /* WebViewController.swift */,
 			);
 			name = Controller;
 			sourceTree = "<group>";
@@ -518,6 +523,7 @@
 				C6DA42181C51F39F0095DE30 /* FingerAuthController.swift in Sources */,
 				C6DA41D81C51ED090095DE30 /* MainController.swift in Sources */,
 				C6DA41D61C51ED090095DE30 /* AppDelegate.swift in Sources */,
+				C6AF361C1C56F85B00A46E85 /* WebViewController.swift in Sources */,
 				C6DA421B1C51F4320095DE30 /* SpeechAuthController.m in Sources */,
 				C6D8D74D1C55BC2B00EE5B97 /* LoginAuthController.swift in Sources */,
 			);
@@ -644,14 +650,19 @@
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				CLANG_ENABLE_MODULES = YES;
+				CODE_SIGN_IDENTITY = "iPhone Developer";
+				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Developer";
+				ENABLE_BITCODE = NO;
 				FRAMEWORK_SEARCH_PATHS = (
 					"$(inherited)",
 					"$(PROJECT_DIR)",
 				);
 				INFOPLIST_FILE = LOTTE_AuthModule/Info.plist;
+				IPHONEOS_DEPLOYMENT_TARGET = 8.1;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
-				PRODUCT_BUNDLE_IDENTIFIER = "Lotte.LOTTE-AuthModule";
+				PRODUCT_BUNDLE_IDENTIFIER = "com.LOTTE.LOTTE-AuthModule";
 				PRODUCT_NAME = "$(TARGET_NAME)";
+				PROVISIONING_PROFILE = "";
 				SWIFT_OBJC_BRIDGING_HEADER = "LOTTE_AuthModule/LOTTE_AuthModule-Bridging-Header.h";
 				SWIFT_OPTIMIZATION_LEVEL = "-Onone";
 			};
@@ -662,14 +673,19 @@
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				CLANG_ENABLE_MODULES = YES;
+				CODE_SIGN_IDENTITY = "iPhone Developer";
+				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Developer";
+				ENABLE_BITCODE = NO;
 				FRAMEWORK_SEARCH_PATHS = (
 					"$(inherited)",
 					"$(PROJECT_DIR)",
 				);
 				INFOPLIST_FILE = LOTTE_AuthModule/Info.plist;
+				IPHONEOS_DEPLOYMENT_TARGET = 8.1;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
-				PRODUCT_BUNDLE_IDENTIFIER = "Lotte.LOTTE-AuthModule";
+				PRODUCT_BUNDLE_IDENTIFIER = "com.LOTTE.LOTTE-AuthModule";
 				PRODUCT_NAME = "$(TARGET_NAME)";
+				PROVISIONING_PROFILE = "";
 				SWIFT_OBJC_BRIDGING_HEADER = "LOTTE_AuthModule/LOTTE_AuthModule-Bridging-Header.h";
 			};
 			name = Release;

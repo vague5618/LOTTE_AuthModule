@@ -25,6 +25,7 @@ class MainController: UIViewController {
         super.didReceiveMemoryWarning()
 
     }
+    
     @IBAction func btnclick_speechAuth(sender: AnyObject) {
     
         let movePage_target = self.storyboard?.instantiateViewControllerWithIdentifier("SpeechAuth") as! SpeechAuthController;
@@ -35,7 +36,6 @@ class MainController: UIViewController {
     
     }
 
-
     @IBAction func btnclick_fingerAuth(sender: AnyObject) {
         
         let movePage_target = self.storyboard?.instantiateViewControllerWithIdentifier("FingerAuth") as! FingerAuthController;
@@ -45,6 +45,7 @@ class MainController: UIViewController {
         self.presentViewController(movePage_target, animated: true, completion: nil)
         
     }
+    
     @IBAction func btnclick_loginAuth(sender: AnyObject) {
         
         let movePage_target = self.storyboard?.instantiateViewControllerWithIdentifier("LoginAuth") as! LoginAuthController;
