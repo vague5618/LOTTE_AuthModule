@@ -17,6 +17,7 @@ class FingerAuthController: UIViewController {
     
     @IBOutlet weak var btn_authorizing: UIButton!
     
+    @IBOutlet weak var btn_settings: UIButton!
     override func viewDidLoad() {
         super.viewDidLoad()
     }
@@ -38,6 +39,15 @@ class FingerAuthController: UIViewController {
     
     }
     
+    @IBAction func btnclick_settings(sender: AnyObject) {
+        
+        if let appSettings = NSURL(string: UIApplicationOpenSettingsURLString)
+        {
+          UIApplication.sharedApplication().openURL(appSettings)
+        }
+    }
+    
+    
     func fingerAuthorzing_process(){
         
         let myContext = LAContext()
@@ -49,10 +59,7 @@ class FingerAuthController: UIViewController {
             myContext.evaluatePolicy(LAPolicy.DeviceOwnerAuthenticationWithBiometrics, localizedReason: localizedReasonText, reply: {(success: Bool, error : NSError?)in
                 
                 if(success){
-                    
-                    NSLog("인증성공");
                     self.moveToWebview()
-                    
                 }
                 else
                 {
@@ -75,13 +82,16 @@ class FingerAuthController: UIViewController {
           
         case LAError.UserFallback.rawValue:
             self.moveToLogin()
+        case LAError.TouchIDNotEnrolled.rawValue:
+            self.alert_Settings()
+            
         default:
             print("another error")
         }
     }
     
-  
-    func moveToWebview(){
+    
+    func alert_Settings(){
         
         let movePage_target = self.storyboard?.instantiateViewControllerWithIdentifier("WebView") as! WebViewController;
         
@@ -89,6 +99,17 @@ class FingerAuthController: UIViewController {
         
         self.presentViewController(movePage_target, animated: false, completion: nil)
     }
+    
+  
+    func moveToWebview(){
+
+        let target_url = NSURL(string: "http://192.168.199.1:3000")//"http://192.168.0.3:3000/")
+        //    let requestObj = NSURLRequest(URL: target_url!)
+        //    webview_default.loadRequest(requestObj)
+        
+        UIApplication.sharedApplication().openURL(target_url!)
+    }
+
     
     
     func moveToLogin(){

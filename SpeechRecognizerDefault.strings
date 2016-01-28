@@ -15,7 +15,7 @@
 
 
 /* default guide strings */
-"guideDefault" = "인증이 필요합니다.";
+"guideDefault" = "인식이 필요합니다.";
 "guideRecognitionFail" = "인식에 실패했습니다.";
 "guideSuggest" = "혹시 아래와 같은 내용을 말씀하신건가요?";
 "guideNetworkError"  = "네트워크 연결 불안정.";
