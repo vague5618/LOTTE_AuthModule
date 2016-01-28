@@ -1,3 +1,4 @@
+
 //
 //  SpeechAuthController.m
 //  LOTTE_AuthModule
@@ -7,6 +8,7 @@
 //
 
 #import "SpeechAuthController.h"
+#import "LOTTE_AuthModule-Swift.h"
 
 
 @interface SpeechAuthController()
@@ -25,13 +27,16 @@
 
 @implementation SpeechAuthController
 
-
 -(void)viewDidAppear:(BOOL)animated
 {
+    self.service_passwd = [GlobalManager get_dict];
     
-    self.selectedServiceType = SpeechRecognizerServiceTypeWeb;
+    if([self.service_passwd isEqualToString:@""])
+    {
+        self.selectedServiceType = SpeechRecognizerServiceTypeWeb;
     
-    [self speechAuthorzing_process];
+        [self speechAuthorzing_process];
+    }
 }
 
 - (IBAction)btnclick_back:(id)sender {
@@ -40,7 +45,7 @@
 }
 
 - (IBAction)btnclick_authorizing:(id)sender {
-
+    
     self.selectedServiceType = SpeechRecognizerServiceTypeWeb;
     
     [self speechAuthorzing_process];
@@ -49,12 +54,12 @@
 
 - (void)speechAuthorzing_process
 {
-//    
-//    NSMutableDictionary *config = [NSMutableDictionary dictionaryWithObjectsAndKeys:
-//                                   @"a22f144ea8d58babab054d6d5b18caec", SpeechRecognizerConfigKeyApiKey,
-//                                   self.selectedServiceType, SpeechRecognizerConfigKeyServiceType,nil
-//                                   ,SpeechRecognizerConfigKeyShowSuggestView, @(NO)];
-//    
+    //
+    //    NSMutableDictionary *config = [NSMutableDictionary dictionaryWithObjectsAndKeys:
+    //                                   @"a22f144ea8d58babab054d6d5b18caec", SpeechRecognizerConfigKeyApiKey,
+    //                                   self.selectedServiceType, SpeechRecognizerConfigKeyServiceType,nil
+    //                                   ,SpeechRecognizerConfigKeyShowSuggestView, @(NO)];
+    //
     NSDictionary * config = @{SpeechRecognizerConfigKeyApiKey : @"a22f144ea8d58babab054d6d5b18caec",
                               SpeechRecognizerConfigKeyCustomStrings : @"SpeechRecognizerDefault",
                               SpeechRecognizerConfigKeyServiceType : self.selectedServiceType,
@@ -82,27 +87,40 @@
 
 - (void) onResults:(NSArray *)results confidences:(NSArray *)confidences marked:(BOOL)marked
 {
-    
-    
+
     NSString * target_string = [[NSString alloc] init];
     
     target_string = [results objectAtIndex:0];
     
-    if (self.service_passwd==nil)
+    if ([self.service_passwd isEqualToString:@""])
     {
-        self.service_passwd = target_string;
-        NSLog(@"\n password setting %@",self.service_passwd);
+        [GlobalManager set_dict: target_string];
     }
     
     else if([self.service_passwd isEqualToString:target_string])
     {
-        NSLog(@"\n LoginSuccess");
+        NSLog(@" LoginSuccess");
+        [self moveToWebView];
+    }
+    
+    else
+    {
+        
     }
 }
 
 
+- (void) moveToWebView
+{
+    UIViewController * targetController = [self.storyboard instantiateViewControllerWithIdentifier:@"WebView"];
+    [self presentViewController: targetController animated: false completion: nil];
+}
 
 
-
+- (void) moveToLoginView
+{
+    UIViewController * targetController = [self.storyboard instantiateViewControllerWithIdentifier:@"LoginAuth"];
+    [self presentViewController: targetController animated: false completion: nil];
+}
 
 @end

@@ -10,12 +10,12 @@
 
 /* default tip strings */
 "tipDefault"   = "단어를 끊지 말고 자연스럽게 말해주세요.";
-"tipStopSpeech" = "현재까지 입력된 검색어를 바로 검색하세요.";
+"tipStopSpeech" = "인식 중...";
 "tipNetworkError" = "잠시 후 다시 시도하세요.";
 
 
 /* default guide strings */
-"guideDefault" = "검색어를 말해주세요";
+"guideDefault" = "인증이 필요합니다.";
 "guideRecognitionFail" = "인식에 실패했습니다.";
 "guideSuggest" = "혹시 아래와 같은 내용을 말씀하신건가요?";
 "guideNetworkError"  = "네트워크 연결 불안정.";

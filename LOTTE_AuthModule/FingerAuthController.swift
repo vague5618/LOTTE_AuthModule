@@ -49,7 +49,10 @@ class FingerAuthController: UIViewController {
             myContext.evaluatePolicy(LAPolicy.DeviceOwnerAuthenticationWithBiometrics, localizedReason: localizedReasonText, reply: {(success: Bool, error : NSError?)in
                 
                 if(success){
-                    self.authorizing_success()
+                    
+                    NSLog("인증성공");
+                    self.moveToWebview()
+                    
                 }
                 else
                 {
@@ -65,13 +68,35 @@ class FingerAuthController: UIViewController {
         }
     }
     
-    func authorizing_success(){
-        NSLog("인증성공")
-    }
     
     func authorizing_fail(error:NSError)
     {
-        NSLog("인증실패, error code",error.code)
+        switch error.code{
+          
+        case LAError.UserFallback.rawValue:
+            self.moveToLogin()
+        default:
+            print("another error")
+        }
     }
-
+    
+  
+    func moveToWebview(){
+        
+        let movePage_target = self.storyboard?.instantiateViewControllerWithIdentifier("WebView") as! WebViewController;
+        
+        // movePage_target.modalTransitionStyle = UIModalTransitionStyle.FlipHorizontal
+        
+        self.presentViewController(movePage_target, animated: false, completion: nil)
+    }
+    
+    
+    func moveToLogin(){
+        
+        let movePage_target = self.storyboard?.instantiateViewControllerWithIdentifier("LoginAuth") as! LoginAuthController;
+        
+        // movePage_target.modalTransitionStyle = UIModalTransitionStyle.FlipHorizontal
+        
+        self.presentViewController(movePage_target, animated: false, completion: nil)
+    }
 }

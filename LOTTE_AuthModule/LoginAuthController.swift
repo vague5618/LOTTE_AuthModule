@@ -46,7 +46,7 @@ class LoginAuthController: UIViewController, UITextFieldDelegate {
     @IBAction func btnclick_login(sender: AnyObject) {
         
         
-        Alamofire.request(.POST, "http://192.168.0.3:4000/member", parameters: ["action_target" : "mobile_loginMember",
+        Alamofire.request(.POST, "http://192.168.199.1:4000/member", parameters: ["action_target" : "mobile_loginMember",
             "inputMemberEmail" : "\(inputText_userEmail.text!)",
             "inputMemberPassword" : "\(inputText_userPasswd.text!)"])
             .responseJSON{ (responseData) -> Void in
@@ -57,7 +57,7 @@ class LoginAuthController: UIViewController, UITextFieldDelegate {
                 
                 if result.isEqualToString("true")
                 {
-                        self.moveToWebview()
+                    self.moveToWebview()
                 }
                 
                 else

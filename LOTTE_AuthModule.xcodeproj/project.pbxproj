@@ -7,6 +7,7 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		C6A8EFAD1C59DA6B0002A94F /* GlobalManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = C6A8EFAC1C59DA6B0002A94F /* GlobalManager.swift */; };
 		C6AF36141C56EE2D00A46E85 /* Alamofire.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = C6D8D7911C55F0D800EE5B97 /* Alamofire.framework */; };
 		C6AF361C1C56F85B00A46E85 /* WebViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = C6AF361B1C56F85B00A46E85 /* WebViewController.swift */; };
 		C6D8D74D1C55BC2B00EE5B97 /* LoginAuthController.swift in Sources */ = {isa = PBXBuildFile; fileRef = C6D8D74C1C55BC2B00EE5B97 /* LoginAuthController.swift */; };
@@ -167,6 +168,7 @@
 /* End PBXCopyFilesBuildPhase section */
 
 /* Begin PBXFileReference section */
+		C6A8EFAC1C59DA6B0002A94F /* GlobalManager.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = GlobalManager.swift; sourceTree = "<group>"; };
 		C6AF361B1C56F85B00A46E85 /* WebViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = WebViewController.swift; sourceTree = "<group>"; };
 		C6D8D74C1C55BC2B00EE5B97 /* LoginAuthController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = LoginAuthController.swift; sourceTree = "<group>"; };
 		C6D8D7861C55F0D800EE5B97 /* Alamofire.xcodeproj */ = {isa = PBXFileReference; lastKnownFileType = "wrapper.pb-project"; name = Alamofire.xcodeproj; path = Alamofire/Alamofire.xcodeproj; sourceTree = "<group>"; };
@@ -222,6 +224,14 @@
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
+		C6A8EF9D1C59D9900002A94F /* Class */ = {
+			isa = PBXGroup;
+			children = (
+				C6A8EFAC1C59DA6B0002A94F /* GlobalManager.swift */,
+			);
+			name = Class;
+			sourceTree = "<group>";
+		};
 		C6D8D7871C55F0D800EE5B97 /* Products */ = {
 			isa = PBXGroup;
 			children = (
@@ -271,6 +281,7 @@
 		C6DA41D41C51ED090095DE30 /* LOTTE_AuthModule */ = {
 			isa = PBXGroup;
 			children = (
+				C6A8EF9D1C59D9900002A94F /* Class */,
 				C6DA42161C51F0990095DE30 /* Controller */,
 				C6DA42151C51F0790095DE30 /* ObjectC-Part */,
 				C6DA41D51C51ED090095DE30 /* AppDelegate.swift */,
@@ -521,6 +532,7 @@
 			files = (
 				C6DA421D1C51F73C0095DE30 /* SpeechAuthController.h in Sources */,
 				C6DA42181C51F39F0095DE30 /* FingerAuthController.swift in Sources */,
+				C6A8EFAD1C59DA6B0002A94F /* GlobalManager.swift in Sources */,
 				C6DA41D81C51ED090095DE30 /* MainController.swift in Sources */,
 				C6DA41D61C51ED090095DE30 /* AppDelegate.swift in Sources */,
 				C6AF361C1C56F85B00A46E85 /* WebViewController.swift in Sources */,
@@ -584,6 +596,7 @@
 				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Developer";
 				COPY_PHASE_STRIP = NO;
 				DEBUG_INFORMATION_FORMAT = dwarf;
+				DEFINES_MODULE = YES;
 				ENABLE_STRICT_OBJC_MSGSEND = YES;
 				ENABLE_TESTABILITY = YES;
 				GCC_C_LANGUAGE_STANDARD = gnu99;
@@ -628,6 +641,7 @@
 				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Developer";
 				COPY_PHASE_STRIP = NO;
 				DEBUG_INFORMATION_FORMAT = "dwarf-with-dsym";
+				DEFINES_MODULE = YES;
 				ENABLE_NS_ASSERTIONS = NO;
 				ENABLE_STRICT_OBJC_MSGSEND = YES;
 				GCC_C_LANGUAGE_STANDARD = gnu99;
@@ -652,6 +666,7 @@
 				CLANG_ENABLE_MODULES = YES;
 				CODE_SIGN_IDENTITY = "iPhone Developer";
 				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Developer";
+				DEFINES_MODULE = YES;
 				ENABLE_BITCODE = NO;
 				FRAMEWORK_SEARCH_PATHS = (
 					"$(inherited)",
@@ -675,6 +690,7 @@
 				CLANG_ENABLE_MODULES = YES;
 				CODE_SIGN_IDENTITY = "iPhone Developer";
 				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Developer";
+				DEFINES_MODULE = YES;
 				ENABLE_BITCODE = NO;
 				FRAMEWORK_SEARCH_PATHS = (
 					"$(inherited)",

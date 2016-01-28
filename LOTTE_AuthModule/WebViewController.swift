@@ -17,10 +17,12 @@ class WebViewController: UIViewController {
     override func viewDidLoad() {
         super.viewDidLoad()
         
-        let target_url = NSURL(string: "http://192.168.0.3:3000")//"http://192.168.0.3:3000/")
-        let requestObj = NSURLRequest(URL: target_url!)
-        webview_default.loadRequest(requestObj)
-        
+        let target_url = NSURL(string: "http://192.168.199.1:3000")//"http://192.168.0.3:3000/")
+    //    let requestObj = NSURLRequest(URL: target_url!)
+    //    webview_default.loadRequest(requestObj)
+
+        UIApplication.sharedApplication().openURL(target_url!)
+
     }
     
     override func didReceiveMemoryWarning() {
