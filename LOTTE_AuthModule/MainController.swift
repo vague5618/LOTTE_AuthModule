@@ -18,6 +18,12 @@ class MainController: UIViewController {
     
     override func viewDidLoad() {
         super.viewDidLoad()
+//        
+//        var Db = DBUtil();
+//        
+//        Db.insertMember("jay", inputUserAddress: "last", inputUserPhone: "010")
+//        Db.checkIdMember("jay")
+//        
 
     }
 

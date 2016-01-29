@@ -11,6 +11,22 @@
 		C6AF36141C56EE2D00A46E85 /* Alamofire.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = C6D8D7911C55F0D800EE5B97 /* Alamofire.framework */; };
 		C6AF361C1C56F85B00A46E85 /* WebViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = C6AF361B1C56F85B00A46E85 /* WebViewController.swift */; };
 		C6B685731C5B0B2D0032FA69 /* JoinViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = C6B685721C5B0B2D0032FA69 /* JoinViewController.swift */; };
+		C6B685771C5B2DC50032FA69 /* libsqlite3.0.tbd in Frameworks */ = {isa = PBXBuildFile; fileRef = C6B685751C5B2DC50032FA69 /* libsqlite3.0.tbd */; };
+		C6B685781C5B2DC50032FA69 /* libsqlite3.tbd in Frameworks */ = {isa = PBXBuildFile; fileRef = C6B685761C5B2DC50032FA69 /* libsqlite3.tbd */; };
+		C6B685971C5B4D960032FA69 /* DBUtil.swift in Sources */ = {isa = PBXBuildFile; fileRef = C6B685961C5B4D960032FA69 /* DBUtil.swift */; };
+		C6B685A51C5B4E420032FA69 /* FMDatabase.m in Sources */ = {isa = PBXBuildFile; fileRef = C6B6859A1C5B4E420032FA69 /* FMDatabase.m */; };
+		C6B685A61C5B4E420032FA69 /* FMResultSet.m in Sources */ = {isa = PBXBuildFile; fileRef = C6B6859C1C5B4E420032FA69 /* FMResultSet.m */; };
+		C6B685A71C5B4E420032FA69 /* FMDatabaseQueue.m in Sources */ = {isa = PBXBuildFile; fileRef = C6B6859E1C5B4E420032FA69 /* FMDatabaseQueue.m */; };
+		C6B685A81C5B4E420032FA69 /* FMDatabaseAdditions.m in Sources */ = {isa = PBXBuildFile; fileRef = C6B685A01C5B4E420032FA69 /* FMDatabaseAdditions.m */; };
+		C6B685A91C5B4E420032FA69 /* FMDatabasePool.m in Sources */ = {isa = PBXBuildFile; fileRef = C6B685A21C5B4E420032FA69 /* FMDatabasePool.m */; };
+		C6B685AA1C5B4E420032FA69 /* Info.plist in Resources */ = {isa = PBXBuildFile; fileRef = C6B685A31C5B4E420032FA69 /* Info.plist */; };
+		C6B685AB1C5B4E6D0032FA69 /* FMDB.h in Sources */ = {isa = PBXBuildFile; fileRef = C6B685981C5B4E420032FA69 /* FMDB.h */; };
+		C6B685AC1C5B4E6D0032FA69 /* FMDatabase.h in Sources */ = {isa = PBXBuildFile; fileRef = C6B685991C5B4E420032FA69 /* FMDatabase.h */; };
+		C6B685AD1C5B4E6D0032FA69 /* FMResultSet.h in Sources */ = {isa = PBXBuildFile; fileRef = C6B6859B1C5B4E420032FA69 /* FMResultSet.h */; };
+		C6B685AE1C5B4E6D0032FA69 /* FMDatabaseQueue.h in Sources */ = {isa = PBXBuildFile; fileRef = C6B6859D1C5B4E420032FA69 /* FMDatabaseQueue.h */; };
+		C6B685AF1C5B4E6D0032FA69 /* FMDatabaseAdditions.h in Sources */ = {isa = PBXBuildFile; fileRef = C6B6859F1C5B4E420032FA69 /* FMDatabaseAdditions.h */; };
+		C6B685B01C5B4E6D0032FA69 /* FMDatabasePool.h in Sources */ = {isa = PBXBuildFile; fileRef = C6B685A11C5B4E420032FA69 /* FMDatabasePool.h */; };
+		C6B685B11C5B4E6D0032FA69 /* Info.plist in Sources */ = {isa = PBXBuildFile; fileRef = C6B685A31C5B4E420032FA69 /* Info.plist */; };
 		C6D8D74D1C55BC2B00EE5B97 /* LoginAuthController.swift in Sources */ = {isa = PBXBuildFile; fileRef = C6D8D74C1C55BC2B00EE5B97 /* LoginAuthController.swift */; };
 		C6D8D79F1C55F12700EE5B97 /* Alamofire.framework in Copy Frameworks */ = {isa = PBXBuildFile; fileRef = C6D8D7911C55F0D800EE5B97 /* Alamofire.framework */; settings = {ATTRIBUTES = (CodeSignOnCopy, RemoveHeadersOnCopy, ); }; };
 		C6D8D7BC1C56141A00EE5B97 /* SwiftyJSON.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = C6D8D7AD1C56140700EE5B97 /* SwiftyJSON.framework */; };
@@ -172,6 +188,21 @@
 		C6A8EFAC1C59DA6B0002A94F /* GlobalManager.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = GlobalManager.swift; sourceTree = "<group>"; };
 		C6AF361B1C56F85B00A46E85 /* WebViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = WebViewController.swift; sourceTree = "<group>"; };
 		C6B685721C5B0B2D0032FA69 /* JoinViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = JoinViewController.swift; sourceTree = "<group>"; };
+		C6B685751C5B2DC50032FA69 /* libsqlite3.0.tbd */ = {isa = PBXFileReference; lastKnownFileType = "sourcecode.text-based-dylib-definition"; name = libsqlite3.0.tbd; path = usr/lib/libsqlite3.0.tbd; sourceTree = SDKROOT; };
+		C6B685761C5B2DC50032FA69 /* libsqlite3.tbd */ = {isa = PBXFileReference; lastKnownFileType = "sourcecode.text-based-dylib-definition"; name = libsqlite3.tbd; path = usr/lib/libsqlite3.tbd; sourceTree = SDKROOT; };
+		C6B685961C5B4D960032FA69 /* DBUtil.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = DBUtil.swift; sourceTree = "<group>"; };
+		C6B685981C5B4E420032FA69 /* FMDB.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = FMDB.h; path = src/fmdb/FMDB.h; sourceTree = "<group>"; };
+		C6B685991C5B4E420032FA69 /* FMDatabase.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = FMDatabase.h; path = src/fmdb/FMDatabase.h; sourceTree = "<group>"; };
+		C6B6859A1C5B4E420032FA69 /* FMDatabase.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = FMDatabase.m; path = src/fmdb/FMDatabase.m; sourceTree = "<group>"; };
+		C6B6859B1C5B4E420032FA69 /* FMResultSet.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = FMResultSet.h; path = src/fmdb/FMResultSet.h; sourceTree = "<group>"; };
+		C6B6859C1C5B4E420032FA69 /* FMResultSet.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = FMResultSet.m; path = src/fmdb/FMResultSet.m; sourceTree = "<group>"; };
+		C6B6859D1C5B4E420032FA69 /* FMDatabaseQueue.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = FMDatabaseQueue.h; path = src/fmdb/FMDatabaseQueue.h; sourceTree = "<group>"; };
+		C6B6859E1C5B4E420032FA69 /* FMDatabaseQueue.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = FMDatabaseQueue.m; path = src/fmdb/FMDatabaseQueue.m; sourceTree = "<group>"; };
+		C6B6859F1C5B4E420032FA69 /* FMDatabaseAdditions.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = FMDatabaseAdditions.h; path = src/fmdb/FMDatabaseAdditions.h; sourceTree = "<group>"; };
+		C6B685A01C5B4E420032FA69 /* FMDatabaseAdditions.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = FMDatabaseAdditions.m; path = src/fmdb/FMDatabaseAdditions.m; sourceTree = "<group>"; };
+		C6B685A11C5B4E420032FA69 /* FMDatabasePool.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = FMDatabasePool.h; path = src/fmdb/FMDatabasePool.h; sourceTree = "<group>"; };
+		C6B685A21C5B4E420032FA69 /* FMDatabasePool.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = FMDatabasePool.m; path = src/fmdb/FMDatabasePool.m; sourceTree = "<group>"; };
+		C6B685A31C5B4E420032FA69 /* Info.plist */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.plist.xml; name = Info.plist; path = src/fmdb/Info.plist; sourceTree = "<group>"; };
 		C6D8D74C1C55BC2B00EE5B97 /* LoginAuthController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = LoginAuthController.swift; sourceTree = "<group>"; };
 		C6D8D7861C55F0D800EE5B97 /* Alamofire.xcodeproj */ = {isa = PBXFileReference; lastKnownFileType = "wrapper.pb-project"; name = Alamofire.xcodeproj; path = Alamofire/Alamofire.xcodeproj; sourceTree = "<group>"; };
 		C6D8D7A21C56140700EE5B97 /* SwiftyJSON.xcodeproj */ = {isa = PBXFileReference; lastKnownFileType = "wrapper.pb-project"; name = SwiftyJSON.xcodeproj; path = ../SwiftyJSON/SwiftyJSON.xcodeproj; sourceTree = "<group>"; };
@@ -206,6 +237,8 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				C6B685771C5B2DC50032FA69 /* libsqlite3.0.tbd in Frameworks */,
+				C6B685781C5B2DC50032FA69 /* libsqlite3.tbd in Frameworks */,
 				C6D8D7BC1C56141A00EE5B97 /* SwiftyJSON.framework in Frameworks */,
 				C6DA42101C51EFA90095DE30 /* libstdc++.6.0.9.tbd in Frameworks */,
 				C6DA42111C51EFA90095DE30 /* libstdc++.6.tbd in Frameworks */,
@@ -232,6 +265,42 @@
 				C6A8EFAC1C59DA6B0002A94F /* GlobalManager.swift */,
 			);
 			name = Class;
+			sourceTree = "<group>";
+		};
+		C6B685791C5B2DE20032FA69 /* Bridging-Header */ = {
+			isa = PBXGroup;
+			children = (
+				C6DA42191C51F4310095DE30 /* LOTTE_AuthModule-Bridging-Header.h */,
+			);
+			name = "Bridging-Header";
+			sourceTree = "<group>";
+		};
+		C6B6857A1C5B333C0032FA69 /* Util */ = {
+			isa = PBXGroup;
+			children = (
+				C6B685961C5B4D960032FA69 /* DBUtil.swift */,
+			);
+			name = Util;
+			sourceTree = "<group>";
+		};
+		C6B685A41C5B4E420032FA69 /* fmdb */ = {
+			isa = PBXGroup;
+			children = (
+				C6B685981C5B4E420032FA69 /* FMDB.h */,
+				C6B685991C5B4E420032FA69 /* FMDatabase.h */,
+				C6B6859A1C5B4E420032FA69 /* FMDatabase.m */,
+				C6B6859B1C5B4E420032FA69 /* FMResultSet.h */,
+				C6B6859C1C5B4E420032FA69 /* FMResultSet.m */,
+				C6B6859D1C5B4E420032FA69 /* FMDatabaseQueue.h */,
+				C6B6859E1C5B4E420032FA69 /* FMDatabaseQueue.m */,
+				C6B6859F1C5B4E420032FA69 /* FMDatabaseAdditions.h */,
+				C6B685A01C5B4E420032FA69 /* FMDatabaseAdditions.m */,
+				C6B685A11C5B4E420032FA69 /* FMDatabasePool.h */,
+				C6B685A21C5B4E420032FA69 /* FMDatabasePool.m */,
+				C6B685A31C5B4E420032FA69 /* Info.plist */,
+			);
+			name = fmdb;
+			path = ../fmdb;
 			sourceTree = "<group>";
 		};
 		C6D8D7871C55F0D800EE5B97 /* Products */ = {
@@ -283,6 +352,8 @@
 		C6DA41D41C51ED090095DE30 /* LOTTE_AuthModule */ = {
 			isa = PBXGroup;
 			children = (
+				C6B6857A1C5B333C0032FA69 /* Util */,
+				C6B685791C5B2DE20032FA69 /* Bridging-Header */,
 				C6A8EF9D1C59D9900002A94F /* Class */,
 				C6DA42161C51F0990095DE30 /* Controller */,
 				C6DA42151C51F0790095DE30 /* ObjectC-Part */,
@@ -298,6 +369,9 @@
 		C6DA41E71C51EE8C0095DE30 /* Frameworks */ = {
 			isa = PBXGroup;
 			children = (
+				C6B685A41C5B4E420032FA69 /* fmdb */,
+				C6B685751C5B2DC50032FA69 /* libsqlite3.0.tbd */,
+				C6B685761C5B2DC50032FA69 /* libsqlite3.tbd */,
 				C6D8D7A21C56140700EE5B97 /* SwiftyJSON.xcodeproj */,
 				C6D8D7861C55F0D800EE5B97 /* Alamofire.xcodeproj */,
 				C6DA420D1C51EFA90095DE30 /* libstdc++.6.0.9.tbd */,
@@ -329,7 +403,6 @@
 			children = (
 				C6DA421C1C51F4530095DE30 /* SpeechAuthController.h */,
 				C6DA421A1C51F4320095DE30 /* SpeechAuthController.m */,
-				C6DA42191C51F4310095DE30 /* LOTTE_AuthModule-Bridging-Header.h */,
 			);
 			name = "ObjectC-Part";
 			sourceTree = "<group>";
@@ -522,6 +595,7 @@
 				C6DA42141C51F01C0095DE30 /* SpeechRecognizerDefault.strings in Resources */,
 				C6DA41E01C51ED090095DE30 /* LaunchScreen.storyboard in Resources */,
 				C6DA41DD1C51ED090095DE30 /* Assets.xcassets in Resources */,
+				C6B685AA1C5B4E420032FA69 /* Info.plist in Resources */,
 				C6DA41DB1C51ED090095DE30 /* Main.storyboard in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -533,14 +607,27 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				C6B685AB1C5B4E6D0032FA69 /* FMDB.h in Sources */,
+				C6B685AC1C5B4E6D0032FA69 /* FMDatabase.h in Sources */,
+				C6B685AD1C5B4E6D0032FA69 /* FMResultSet.h in Sources */,
+				C6B685AE1C5B4E6D0032FA69 /* FMDatabaseQueue.h in Sources */,
+				C6B685AF1C5B4E6D0032FA69 /* FMDatabaseAdditions.h in Sources */,
+				C6B685B01C5B4E6D0032FA69 /* FMDatabasePool.h in Sources */,
+				C6B685B11C5B4E6D0032FA69 /* Info.plist in Sources */,
 				C6DA421D1C51F73C0095DE30 /* SpeechAuthController.h in Sources */,
 				C6DA42181C51F39F0095DE30 /* FingerAuthController.swift in Sources */,
 				C6A8EFAD1C59DA6B0002A94F /* GlobalManager.swift in Sources */,
 				C6DA41D81C51ED090095DE30 /* MainController.swift in Sources */,
+				C6B685A71C5B4E420032FA69 /* FMDatabaseQueue.m in Sources */,
+				C6B685A81C5B4E420032FA69 /* FMDatabaseAdditions.m in Sources */,
 				C6B685731C5B0B2D0032FA69 /* JoinViewController.swift in Sources */,
+				C6B685A91C5B4E420032FA69 /* FMDatabasePool.m in Sources */,
 				C6DA41D61C51ED090095DE30 /* AppDelegate.swift in Sources */,
+				C6B685A61C5B4E420032FA69 /* FMResultSet.m in Sources */,
 				C6AF361C1C56F85B00A46E85 /* WebViewController.swift in Sources */,
+				C6B685971C5B4D960032FA69 /* DBUtil.swift in Sources */,
 				C6DA421B1C51F4320095DE30 /* SpeechAuthController.m in Sources */,
+				C6B685A51C5B4E420032FA69 /* FMDatabase.m in Sources */,
 				C6D8D74D1C55BC2B00EE5B97 /* LoginAuthController.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;

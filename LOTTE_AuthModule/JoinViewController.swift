@@ -68,8 +68,6 @@ class JoinViewController: UIViewController, UITextFieldDelegate {
                     if result.isEqualToString("true")
                     {
                         self.alertjoinSuccess();
-                       
-                       // self.dismissViewControllerAnimated(true, completion: nil)
                     }
                         
                     else
