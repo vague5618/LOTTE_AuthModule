@@ -10,6 +10,7 @@
 		C6A8EFAD1C59DA6B0002A94F /* GlobalManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = C6A8EFAC1C59DA6B0002A94F /* GlobalManager.swift */; };
 		C6AF36141C56EE2D00A46E85 /* Alamofire.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = C6D8D7911C55F0D800EE5B97 /* Alamofire.framework */; };
 		C6AF361C1C56F85B00A46E85 /* WebViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = C6AF361B1C56F85B00A46E85 /* WebViewController.swift */; };
+		C6B685731C5B0B2D0032FA69 /* JoinViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = C6B685721C5B0B2D0032FA69 /* JoinViewController.swift */; };
 		C6D8D74D1C55BC2B00EE5B97 /* LoginAuthController.swift in Sources */ = {isa = PBXBuildFile; fileRef = C6D8D74C1C55BC2B00EE5B97 /* LoginAuthController.swift */; };
 		C6D8D79F1C55F12700EE5B97 /* Alamofire.framework in Copy Frameworks */ = {isa = PBXBuildFile; fileRef = C6D8D7911C55F0D800EE5B97 /* Alamofire.framework */; settings = {ATTRIBUTES = (CodeSignOnCopy, RemoveHeadersOnCopy, ); }; };
 		C6D8D7BC1C56141A00EE5B97 /* SwiftyJSON.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = C6D8D7AD1C56140700EE5B97 /* SwiftyJSON.framework */; };
@@ -170,6 +171,7 @@
 /* Begin PBXFileReference section */
 		C6A8EFAC1C59DA6B0002A94F /* GlobalManager.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = GlobalManager.swift; sourceTree = "<group>"; };
 		C6AF361B1C56F85B00A46E85 /* WebViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = WebViewController.swift; sourceTree = "<group>"; };
+		C6B685721C5B0B2D0032FA69 /* JoinViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = JoinViewController.swift; sourceTree = "<group>"; };
 		C6D8D74C1C55BC2B00EE5B97 /* LoginAuthController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = LoginAuthController.swift; sourceTree = "<group>"; };
 		C6D8D7861C55F0D800EE5B97 /* Alamofire.xcodeproj */ = {isa = PBXFileReference; lastKnownFileType = "wrapper.pb-project"; name = Alamofire.xcodeproj; path = Alamofire/Alamofire.xcodeproj; sourceTree = "<group>"; };
 		C6D8D7A21C56140700EE5B97 /* SwiftyJSON.xcodeproj */ = {isa = PBXFileReference; lastKnownFileType = "wrapper.pb-project"; name = SwiftyJSON.xcodeproj; path = ../SwiftyJSON/SwiftyJSON.xcodeproj; sourceTree = "<group>"; };
@@ -339,6 +341,7 @@
 				C6DA41D71C51ED090095DE30 /* MainController.swift */,
 				C6D8D74C1C55BC2B00EE5B97 /* LoginAuthController.swift */,
 				C6AF361B1C56F85B00A46E85 /* WebViewController.swift */,
+				C6B685721C5B0B2D0032FA69 /* JoinViewController.swift */,
 			);
 			name = Controller;
 			sourceTree = "<group>";
@@ -534,6 +537,7 @@
 				C6DA42181C51F39F0095DE30 /* FingerAuthController.swift in Sources */,
 				C6A8EFAD1C59DA6B0002A94F /* GlobalManager.swift in Sources */,
 				C6DA41D81C51ED090095DE30 /* MainController.swift in Sources */,
+				C6B685731C5B0B2D0032FA69 /* JoinViewController.swift in Sources */,
 				C6DA41D61C51ED090095DE30 /* AppDelegate.swift in Sources */,
 				C6AF361C1C56F85B00A46E85 /* WebViewController.swift in Sources */,
 				C6DA421B1C51F4320095DE30 /* SpeechAuthController.m in Sources */,

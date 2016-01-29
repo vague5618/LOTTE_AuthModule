@@ -116,13 +116,16 @@
     target_string = [results objectAtIndex:0];
     
     
+    // reset success
+    
     if ([self.service_passwd isEqualToString:@""] && [self.service_status isEqualToString:@"reset_success"])
     {
         self.service_passwd = target_string;
         [GlobalManager set_dict: target_string];
-        [self success_reset];
-        
+        [self alertView_resetSuccess];
     }
+    
+    // init
     
     else if ([self.service_passwd isEqualToString:@""])
     {
@@ -147,17 +150,23 @@
     
     else
     {
+        if([self.service_status isEqualToString:@"reset"])
+        {
+            [self alertView_resetFail];
+        }
         
-        UIAlertView *fail_alertView = [[UIAlertView alloc] initWithTitle:@"로그인 실패"
-                                                                 message:@"암호가 틀렸습니다."
-                                                                delegate:self
-                                                       cancelButtonTitle:@"취소"
-                                                       otherButtonTitles:@"재시도",@"Id/Pwd 로그인",nil];
-        
-        fail_alertView.tag = 2;
-        
-        [fail_alertView show];
-
+        else
+        {
+            UIAlertView *fail_alertView = [[UIAlertView alloc] initWithTitle:@"로그인 실패"
+                                                                     message:@"암호가 틀렸습니다."
+                                                                    delegate:self
+                                                           cancelButtonTitle:@"취소"
+                                                           otherButtonTitles:@"재시도",@"Id/Pwd 로그인",nil];
+            
+            fail_alertView.tag = 2;
+            
+            [fail_alertView show];
+        }
     }
 }
 
@@ -175,10 +184,8 @@
     [self presentViewController: targetController animated: false completion: nil];
 }
 
-- (void) success_reset
+- (void) alertView_resetSuccess
 {
-    
-    
     UIAlertView *success_alertView = [[UIAlertView alloc] initWithTitle:@"암호 재설정"
                                                               message:@"암호가 변경되었습니다."
                                                              delegate:self
@@ -190,12 +197,31 @@
 }
 
 
+
+- (void) alertView_resetFail
+{
+    UIAlertView *fail_alertView = [[UIAlertView alloc] initWithTitle:@"암호 재설정 실패"
+                                                                message:@"기존 암호가 틀렸습니다."
+                                                               delegate:self
+                                                      cancelButtonTitle:@"확인"
+                                                      otherButtonTitles:nil, nil];
+    
+    self.service_status =@"";
+
+    
+    [fail_alertView show];
+}
+
+
+
 - (void)alertView:(UIAlertView *)alertView didDismissWithButtonIndex:(NSInteger)buttonIndex {
+    
+    // init
     
     if(alertView.tag == 1)
     {
         if (buttonIndex == 0) {
-            
+            [self dismissViewControllerAnimated:NO completion:nil];
         }
         else if (buttonIndex == 1) {
             
@@ -205,6 +231,7 @@
         }
     }
     
+    //Fail Login
     
     else if(alertView.tag == 2)
     {
@@ -222,6 +249,8 @@
             [self moveToLoginView];
         }
     }
+    
+    // Reset Pwd
     
     else if(alertView.tag == 3)
     {

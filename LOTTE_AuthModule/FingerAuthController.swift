@@ -103,7 +103,7 @@ class FingerAuthController: UIViewController {
   
     func moveToWebview(){
 
-        let target_url = NSURL(string: "http://192.168.199.1:3000")//"http://192.168.0.3:3000/")
+        let target_url = NSURL(string: "http://192.168.0.2:3000/")//"http://192.168.0.3:3000/")
         //    let requestObj = NSURLRequest(URL: target_url!)
         //    webview_default.loadRequest(requestObj)
         
@@ -120,4 +120,6 @@ class FingerAuthController: UIViewController {
         
         self.presentViewController(movePage_target, animated: false, completion: nil)
     }
+    
+        
 }
